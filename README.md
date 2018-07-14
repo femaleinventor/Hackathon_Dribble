@@ -46,6 +46,9 @@ How many Nutmegs will happen?
 A User can look historically at the data and compare themselves to other User's predictions.
 
 
+We also protect soccer players and prominent members of the soccer community by restricting these. So someone can't user MiaHamm or Abby-Wambach as a username in the app.
+
+
 **Store**
 
 A user can go see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
