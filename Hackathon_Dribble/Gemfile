@@ -21,7 +21,6 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
 
-
 gem 'loofah', '>= 2.2.2'
 
 gem 'devise'
