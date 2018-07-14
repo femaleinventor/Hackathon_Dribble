@@ -15,11 +15,7 @@ We are driving consumer-centric engagement in women's soccer. We believe the bes
 
 Our hooks include:
 
-
-
-
-
-The Dribble Section:
+**Dribble**
 
 Real-time in match user engagement with Reactive and Predictive notifications.
 
@@ -43,15 +39,11 @@ How many Nutmegs will happen?
 
 A User can look historically at the data and compare themselves to other User's predictions.
 
+**Store**
 
+A user can go see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
 
-
-
-Store
-
-The hook in this section is that you can go there to see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
-
-The Wall
+**Wall**
 
 This is where current tweets with specified keywords are returned in realtime with sentiment analysis. The keywords USWNT, NWSL, and WoSo are clicked and what results are the last tweets made with that typed in the body, and an algorithm calculates the emotions involved.
 
@@ -77,14 +69,31 @@ Fear
 0.09
 
 
-4) Twitter Lists
+**Twitter**
 
 Review twitter lists from Women's Soccer Writers and Teams from around the world. It's a twitter dashboard for what the sports writers, national team players, nwsl players, retired players, recent call-ups, and fans are tweeting about.
 
 
 ## What technology have we employed?
 
-Ruby on Rails backend, JS frontend, Deployed to Heroku from an open source to Github repository.
+Ruby on Rails backend, Postgres Database, JS frontend, Deployed to Heroku from an open source to Github repository.
 
+
+## Team
+
+Denise Duffy | @femaleinventor | denise@deniseduffy.com
+Product Manager, Presenter, Front and Backend Engineer
+
+Ethan Fertsch | @efertsch | efertch@gmail.com
+Backend Engineer, Frontend Engineer
+
+Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |
+Database Engineer, Product Designer, Data Scientist
+
+Alison Gale | @agale123 | agale753@gmail.com |
+Frontend Engineer, Backend Engineer, Product Designer, Data Scientist
+
+
+Current Schema:
 
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/master/Dribble-Schema.png)
