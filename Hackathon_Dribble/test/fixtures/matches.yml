@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  result: MyString
+  channel: MyString
+  start_time: 2018-07-14 13:13:09
+  start_date: 2018-07-14
+  league: one
+  away_team: one
+  home_team: one
+  sport: one
+  venue: one
+
+two:
+  result: MyString
+  channel: MyString
+  start_time: 2018-07-14 13:13:09
+  start_date: 2018-07-14
+  league: two
+  away_team: two
+  home_team: two
+  sport: two
+  venue: two
