@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180714182047) do
+ActiveRecord::Schema.define(version: 20180714190913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,27 @@ ActiveRecord::Schema.define(version: 20180714182047) do
     t.index ["league_id"], name: "index_matches_on_league_id"
     t.index ["sport_id"], name: "index_matches_on_sport_id"
     t.index ["venue_id"], name: "index_matches_on_venue_id"
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.bigint "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team_id"], name: "index_players_on_team_id"
+  end
+
+  create_table "predictions", force: :cascade do |t|
+    t.string "guess"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "reason"
+    t.boolean "correct"
+    t.integer "likes"
+    t.bigint "user_id"
+    t.bigint "match_id"
+    t.index ["match_id"], name: "index_predictions_on_match_id"
+    t.index ["user_id"], name: "index_predictions_on_user_id"
   end
 
   create_table "sports", force: :cascade do |t|
@@ -102,5 +123,8 @@ ActiveRecord::Schema.define(version: 20180714182047) do
   add_foreign_key "matches", "leagues"
   add_foreign_key "matches", "sports"
   add_foreign_key "matches", "venues"
+  add_foreign_key "players", "teams"
+  add_foreign_key "predictions", "matches"
+  add_foreign_key "predictions", "users"
   add_foreign_key "teams", "sports"
 end
