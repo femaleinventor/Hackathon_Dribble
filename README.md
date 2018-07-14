@@ -80,7 +80,7 @@ Review twitter lists from Women's Soccer Writers and Teams from around the world
 
 ## What technology have we employed?
 
-Ruby on Rails backend, Postgres Database, JS frontend, Deployed to Heroku from an open source to Github repository.
+Ruby on Rails backend, Postgres Database, JS frontend, Deployed to Heroku from an open source MIT License to Github.
 
 
 ## Team
