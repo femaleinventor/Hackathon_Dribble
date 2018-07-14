@@ -3,7 +3,8 @@ A repo for competing in the US Soccer Hackathon.
 
 ## What is the problem we are trying to solve?
 
-Woman's Soccer has incredible potentially to grow globally. In the past year, a World Cup off year, there have been in England and in Mexico multiple games that had over 50k fans. For the 2015 World Cup final there was a staggering 750 Million people who watched the game. Once they leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
+
+Woman's Soccer has incredible potentially to grow globally. In the past year, a World Cup off year, in England and in Mexico they had over 50k fans at the games. And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. Once they leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
 
 ## Challenges
 
@@ -13,9 +14,14 @@ There are no API's out there and very few quality datasets freely available.
 
 We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks.
 
+Our app is divided into 4 sections:
+
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/homepage.png)
+
 Our hooks include:
 
-1) In the Dribble Section:
+**Dribble**
+
 
 Real-time in match user engagement with Reactive and Predictive notifications.
 
@@ -39,13 +45,12 @@ How many Nutmegs will happen?
 
 A User can look historically at the data and compare themselves to other User's predictions.
 
-2) Store
 
-The hook in this section is that you can go there to see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
+**Store**
 
-3) The Wall
+A user can go see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
 
-This is where current tweets are returned in realtime with sentiment analysis. The keywords USWNT, NWSL, and WoSo are pressed and what results are the last tweets made with that typed in the body, and an algorithm calculates the emotions involved.
+**Wall**
 
 
 Sample Returns from Sentiment Analysis:
@@ -68,6 +73,35 @@ Sadness
 Fear
 0.09
 
+
+**Twitter**
+
+Review twitter lists from Women's Soccer Writers and Teams from around the world. It's a twitter dashboard for what the sports writers, national team players, nwsl players, retired players, recent call-ups, and fans are tweeting about.
+
+
+## What technology have we employed?
+
+Ruby on Rails backend, Postgres Database, JS frontend, Deployed to Heroku from an open source MIT License to Github.
+
+
+## Team
+
+Denise Duffy | @femaleinventor | denise@deniseduffy.com
+Product Manager, Presenter, Front and Backend Engineer
+
+Ethan Fertsch | @efertsch | efertch@gmail.com
+Backend Engineer, Frontend Engineer
+
+Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |
+Database Engineer, Product Designer, Data Scientist
+
+Alison Gale | @agale123 | agale753@gmail.com |
+Frontend Engineer, Backend Engineer, Product Designer, Data Scientist
+
+
+Current Schema:
+
+=======
 4) Twitter Lists
 
 Review twitter lists from Women's Soccer Writers and teams around the world.  

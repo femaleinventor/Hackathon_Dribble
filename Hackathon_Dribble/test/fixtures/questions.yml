@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  display_text: MyString
+  response_type: MyString
+
+two:
+  display_text: MyString
+  response_type: MyString
