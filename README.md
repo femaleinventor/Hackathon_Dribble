@@ -7,11 +7,11 @@ Woman's Soccer has incredible potentially to grow globally. In the past year, a 
 
 ## Challenges
 
-There are no API's out there and very few quality datasets freely available.
+There are no API's out there and very few quality datasets freely available. Other sports such as Women's Basketball have this.
 
 ## What is our project?
 
-We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks.
+We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. Our business model is providing a alternative store that sells items not under the US Soccer Umbrella
 
 Our app is divided into 4 sections:
 
@@ -92,10 +92,10 @@ Ethan Fertsch | @efertsch | efertch@gmail.com
 Backend Engineer, Frontend Engineer
 
 Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |
-Database Engineer, Product Designer, Data Scientist
+Database Engineer, Data Maper and Parser
 
 Alison Gale | @agale123 | agale753@gmail.com |
-Frontend Engineer, Backend Engineer, Product Designer, Data Scientist
+Frontend Engineer, Backend Engineer, Data Maper and Parser
 
 
 Current Schema:
