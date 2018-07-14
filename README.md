@@ -13,6 +13,10 @@ There are no API's out there and very few quality datasets freely available.
 
 We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks.
 
+Our app is divided into 4 sections:
+
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/homepage.png)
+
 Our hooks include:
 
 **Dribble**
