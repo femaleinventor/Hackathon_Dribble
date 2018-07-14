@@ -3,6 +3,7 @@ A repo for competing in the US Soccer Hackathon.
 
 ## What is the problem we are trying to solve?
 
+
 Woman's Soccer has incredible potentially to grow globally. In the past year, a World Cup off year, in England and in Mexico they had over 50k fans at the games. And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. Once they leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
 
 ## Challenges
@@ -20,6 +21,7 @@ Our app is divided into 4 sections:
 Our hooks include:
 
 **Dribble**
+
 
 Real-time in match user engagement with Reactive and Predictive notifications.
 
@@ -43,13 +45,12 @@ How many Nutmegs will happen?
 
 A User can look historically at the data and compare themselves to other User's predictions.
 
+
 **Store**
 
 A user can go see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
 
 **Wall**
-
-This is where current tweets with specified keywords are returned in realtime with sentiment analysis. The keywords USWNT, NWSL, and WoSo are clicked and what results are the last tweets made with that typed in the body, and an algorithm calculates the emotions involved.
 
 
 Sample Returns from Sentiment Analysis:
@@ -99,5 +100,12 @@ Frontend Engineer, Backend Engineer, Product Designer, Data Scientist
 
 
 Current Schema:
+
+=======
+4) Twitter Lists
+
+Review twitter lists from Women's Soccer Writers and teams around the world.  
+
+## What technology have we employed?
 
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/master/Dribble-Schema.png)
