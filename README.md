@@ -93,19 +93,12 @@ Ethan Fertsch | @efertsch | efertch@gmail.com
 Backend Engineer, Frontend Engineer
 
 Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |
-Database Engineer, Data Maper and Parser
+Database Engineer, Data Mapper and Parser
 
 Alison Gale | @agale123 | agale753@gmail.com |
-Frontend Engineer, Backend Engineer, Data Maper and Parser
+Frontend Engineer, Backend Engineer, Data Mapper and Parser
 
 
 Current Schema:
-
-=======
-4) Twitter Lists
-
-Review twitter lists from Women's Soccer Writers and teams around the world.  
-
-## What technology have we employed?
 
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/master/Dribble-Schema.png)
