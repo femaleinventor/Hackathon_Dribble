@@ -1,7 +1,5 @@
 class Match < ApplicationRecord
-  belongs_to :league
-  belongs_to :away_team
-  belongs_to :home_team
-  belongs_to :sport
-  belongs_to :venue
+  belongs_to :league, optional: true
+  belongs_to :sport, optional: true
+  belongs_to :venue, optional: true
 end
