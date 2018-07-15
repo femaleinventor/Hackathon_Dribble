@@ -87,8 +87,6 @@
                 </div>
 
                 <%match.questions.each do |question|%>
-
-
                   <div class="slide black-bg">
                     <div class="row justify-content-center">
                       <div class="col-xs-12">
@@ -100,17 +98,17 @@
                         <%= form_tag(controller: 'predictions', action: 'create') do %>
                           <%if question.response_type == "integer"%>
                             <div class="form-group">
+                              <%= label_tag :guess, "Your Prediction", class:"prediction-label"%>
                               <%= text_field_tag :guess %>
-                              <%= label_tag :guess, "Your Prediction"%>
                             </div>
                             <%= submit_tag "Submit", class: "btn btn-primary btn-md" %>
                           <%elsif question.response_type == "boolean"%>
 
                           <div class="form-group">
-                            <%= label_tag :guess, "Your Prediction"%>
+                            <%= label_tag :guess, "Your Prediction", class:"prediction-label"%>
                             <%= select_tag :guess, '<option value="true">True</option><option value="false">False</option>'.html_safe %>
-                            <%= submit_tag "Submit", class: "btn btn-primary btn-md" %>
                           </div>
+                          <%= submit_tag "Submit", class: "btn btn-primary btn-md" %>
 
 
                           <%end%>
@@ -122,7 +120,7 @@
                         <% end %>
                       </div>
                     </div>
-                    </div>
+                  </div>
                 <%end%>
 
 
