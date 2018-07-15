@@ -9,7 +9,7 @@
 require 'csv'
 
 # Parse in Teams csv and create Team objects
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'BCD_for_CSV_teams_062518.csv'))
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'BCD_for_CSV_teams_062618.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   t = Team.new
@@ -162,7 +162,7 @@ venues_list = [
 
 
 venues_list.each do |venue|
-  Venue.create!(name: venue[0], picture_url: venue[1], address: venue[2], timezone: venue[3])
+  Venue.create!(name: venue[0], picture_url: venue[1], address: venue[2], time_zone: venue[3])
 end
 
 #----------------------
@@ -173,7 +173,7 @@ end
 matches = [
   [ "Seattle Reign", "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2, 11, 10, 1, 5, 7443 ],
   [ "Tie",           "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2,  8,  6, 1, 7, 7444 ],
-  [ "Utah Royals",   "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2, 14, 13, 1, 8, 7445 ]
+  [ "Utah Royals",   "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2, 14, 13, 1, 8, 7445 ],
   [ "", "go90 App", Time.parse("20:00"), Date.new(2018,7,15,12), 2,  7, 10, 1, 5, 7545 ],
   [ "", "go90 App", Time.parse("20:00"), Date.new(2018,7,20,12), 2,  8, 13, 1, 8, 7546 ],
   [ "", "go90 App", Time.parse("15:30"), Date.new(2018,7,21,12), 2, 11,  9, 1, 4, 7547 ]
@@ -191,7 +191,7 @@ questions_list = [
   ["How many diving saves will the keeper for Portland Thorns FC have?", "integer", 1, 7443],
   ["How many diving saves will the keeper for Seattle Reign FC have?", "integer", 1, 7443],
   ["Which team will have more interceptions?", "triplet", 1, 7443],
-  ["Who will win?", "triplet" 1, 7443],
+  ["Who will win?", "triplet", 1, 7443],
   ["Will Margaret Purce nutmeg another player?", "boolean", 1, 7443],
   ["Will Beverly Yanez nutmeg another player?", "boolean", 2, 7443],
   ["How many goals will North Carolina Courage score?", "integer", 2, 7444],
@@ -201,9 +201,9 @@ questions_list = [
   ["How many diving saves will the keeper for North Carolina Courage have?", "integer", 2, 7444],
   ["How many diving saves will the keeper for Chicago Red Stars have?", "integer", 2, 7444],
   ["Which team will have more interceptions?", "triplet", 2, 7444],
-  ["Who will win?", "triplet" 1, 7444],
+  ["Who will win?", "triplet", 1, 7444],
   ["Will Jaelene Hinkle nutmeg another player?", "boolean", 2, 7444],
-  ["Will Débora Cristiane de Oliveira nutmeg another player?", "boolean" 2, 7444],
+  ["Will Débora Cristiane de Oliveira nutmeg another player?", "boolean", 2, 7444],
   ["How many goals will Utah Royals FC score?", "integer", 3, 7445],
   ["How many goals will Washington Spirit score?", "integer", 3, 7445],
   ["How many shot assists will Katrina Gorry have?", "integer", 3, 7445],
@@ -245,7 +245,7 @@ users_list = [
 
 
 users_list.each do |user|
-  User.create!(name: user[0], username: user[1], twitter_handle: user[2], street_address: user[3], city: user[4], state: user[5], zipcode: user[6], time_zone: user[7], country: user[8], email: user[9], password: user[10], avatar: user[11])
+  User.create!(name: user[0], username: user[1], twitter_handle: user[2], street_address: user[3], city: user[4], state: user[5], zipcode: user[6], time_zone: user[7], country: user[8], email: user[9], password: user[10])
 end
 
 
@@ -285,3 +285,7 @@ predictions_list = [
   ["Utah Royals", "", "", 2, 3, 27],
   ["Utah Royals", "", "", 1, 3, 28]
 ]
+
+predictions_list.each do |prediction|
+  Prediction.create!(guess: prediction[0], reason: prediction[1], likes: prediction[2], user_id: prediction[3], match_id: prediction[4], question_id: prediction[5])
+end
