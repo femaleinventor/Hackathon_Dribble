@@ -104,7 +104,7 @@ Frontend Engineer, Backend Engineer, Data Mapper and Parser
 Denise Duffy | @femaleinventor | denise@deniseduffy.com
 Product Manager, Presenter, Front and Backend Engineer
 
-Ethan Fertsch | @efertsch | efertch@gmail.com
+Ethan Fertsch | @efertsch | efertsch@gmail.com
 Backend Engineer, Frontend Engineer
 
 Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |

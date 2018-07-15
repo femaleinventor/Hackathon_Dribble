@@ -1,5 +1,5 @@
 class AddMatchToQuestion < ActiveRecord::Migration[5.1]
   def change
-    add_reference :questions, :match, foreign_key: true
+    add_reference :questions, :match
   end
 end

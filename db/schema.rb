@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180715055928) do
+ActiveRecord::Schema.define(version: 20180715071505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,7 +60,9 @@ ActiveRecord::Schema.define(version: 20180715055928) do
     t.integer "likes"
     t.bigint "user_id"
     t.bigint "match_id"
+    t.bigint "question_id"
     t.index ["match_id"], name: "index_predictions_on_match_id"
+    t.index ["question_id"], name: "index_predictions_on_question_id"
     t.index ["user_id"], name: "index_predictions_on_user_id"
   end
 
@@ -116,6 +118,7 @@ ActiveRecord::Schema.define(version: 20180715055928) do
     t.string "zipcode"
     t.string "country"
     t.string "time_zone"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -134,8 +137,6 @@ ActiveRecord::Schema.define(version: 20180715055928) do
   add_foreign_key "matches", "sports"
   add_foreign_key "matches", "venues"
   add_foreign_key "players", "teams"
-  add_foreign_key "predictions", "matches"
   add_foreign_key "predictions", "users"
-  add_foreign_key "questions", "matches"
   add_foreign_key "teams", "sports"
 end
