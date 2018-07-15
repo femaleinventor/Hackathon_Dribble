@@ -3,12 +3,11 @@ A repo for competing in the US Soccer Hackathon.
 
 ## What is the problem we are trying to solve?
 
-
-Woman's Soccer has incredible potentially to grow globally. In the past year, a World Cup off year, in England and in Mexico they had over 50k fans at the games. And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. Once they leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
+Woman's Soccer has incredible potentially to grow globally.  And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. In the past year, a World Cup off year, Mexico in their first year in league play had multiple games with over 50k fans at the games. England Super league did the same in their semis and finals. Once sports goers leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
 
 ## Challenges
 
-There are no API's out there and very few quality datasets freely available. Other sports such as Women's Basketball have this.
+There are no Women's Soccer API's out there and very few quality datasets freely available. Other sports such as Women's Basketball have this.
 
 ## What is our project?
 
@@ -32,6 +31,8 @@ realtime results showing
 Predictive Notification example:
 Do you think Sky Blue FC will score in the next 10 minutes?
 realtime results showing
+
+Choose to engage with leagues and teams around the world.
 
 
 Our hooks also include pre-match predictions on a variety of stats in a beautiful app format.
