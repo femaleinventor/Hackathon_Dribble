@@ -155,14 +155,11 @@ end
 #----------------------
 #[result, channel, start_time, start_date, league_id, away_team_id, home_team_id, sport_id, venue_id, ref_id]
 matches = [
-  [],
-  [],
-  []
+  [ "Seattle Reign", "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2, 11, 10, 1, 6, 7443 ],
+  [ "Tie",           "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2,  8,  6, 1, 6, 7444 ],
+  [ "Utah Royals",   "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2, 14, 13, 1, 6, 7445 ]
 ]
-
-
-
-
+  
 # [display_text, response_type, match_id, ref_id]
 questions = [
   ["How many goals will Portland Thorns FC score?", "integer", 1, 7443],
