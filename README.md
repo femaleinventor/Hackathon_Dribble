@@ -71,42 +71,32 @@ A user can go see what the WoSo community is selling. Purchase a fun funky t-shi
 
 **Wall**
 
+We have realtime sentiment analysis!!!
 
 
 
 
-Sample Returns from Sentiment Analysis:
-
-Negative
--0.75
-
-Joy
-0.47
-
-Anger
-0.14
-
-Disgust
-0.13
-
-Sadness
-0.50
-
-Fear
-0.09
 
 
 **Twitter**
 
 Review twitter lists from Women's Soccer Writers and Teams from around the world. It's a twitter dashboard for what the sports writers, national team players, nwsl players, retired players, recent call-ups, and fans are tweeting about.
 
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/Wosowriters.png)
+
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/FrancePlayers.png)
+
+
 
 ## What technology have we employed?
 
-Ruby on Rails backend, Postgres Database, JS frontend, Deployed to Heroku from an open source MIT License to Github.
+Ruby on Rails backend, Postgres Database, JS frontend, StatsBomb Data, Deployed to Heroku from an open source MIT License to Github.
 
 
 ## Team
+
+Alison Gale | @agale123 | agale753@gmail.com |
+Frontend Engineer, Backend Engineer, Data Mapper and Parser
 
 Denise Duffy | @femaleinventor | denise@deniseduffy.com
 Product Manager, Presenter, Front and Backend Engineer
@@ -117,8 +107,7 @@ Backend Engineer, Frontend Engineer
 Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |
 Database Engineer, Data Mapper and Parser
 
-Alison Gale | @agale123 | agale753@gmail.com |
-Frontend Engineer, Backend Engineer, Data Mapper and Parser
+
 
 
 Current Schema:
