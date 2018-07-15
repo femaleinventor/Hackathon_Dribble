@@ -1,0 +1,241 @@
+<div id="fullpage">
+
+            <% sorted_matches = sort_matches_by_date(@matches) %>
+           <% sorted_matches.each do |match| %>
+            <% @home_team = Team.find(match.home_team_id) %>
+            <% @away_team = Team.find(match.away_team_id) %>
+            <div class="section fp-bg fp-noscroll">
+              <!-- Makes gradient behind match up -->
+              <div class="slide" style="background: #FFFFFF; background: -webkit-linear-gradient(to right, <%= @home_team.bright_color %>, <%= @away_team.bright_color %>);
+              background: linear-gradient(to right, <%= @home_team.bright_color %>, <%= @away_team.bright_color %>);">
+              <!-- attempting audio -->
+              <!-- <audio data-autoplay>
+                  <source src="audio/soccer-ball-hit-ground.wav" type="audio/wav">
+              </audio> -->
+                <div class="container-fluid">
+
+                  <div class="row">
+                    <div class="col-xs-12 mx-auto">
+                      <div class="match-teams">
+                        <h1 class="match-heading"> <%= @home_team.name %> vs. <%=  @away_team.name %> </h1>
+                        <p class="match-info"> <%= match.venue.name %> <%= format_match_date(match) %> (<%= match.venue.time_zone %>) </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12 mx-auto">
+                      <h3 class="prediction-prompt"> Which Team will Win? </h3>
+                      <!-- Logic checking if a prediction has already been made for a certain match by the current user -->
+                      <% if current_user.predictions.select{|prediction| prediction.match_id == match.id}.empty?  %>
+
+                        <%= form_tag(controller: 'predictions', action: 'create', class: "form-inline") do %>
+
+                          <div class="d-flex justify-content-around">
+                            <!-- home -->
+                            <div class="form-group form-check form-check-inline">
+                              <%= label_tag :guess, "#{@home_team.name}", class: "form-check-label"%>
+                              <%= check_box_tag :guess, @home_team.name, false, class: "prediction-checkbox form-check-input" %>
+                            </div>
+
+                            <!-- tie -->
+
+                            <div class="form-group form-check form-check-inline">
+                              <!-- custom control for check boxes? -->
+                              <!-- <label class="custom-control custom-checkbox"> -->
+                                <%= label_tag :guess, "Tie", class: "form-check-label"%>
+                                <%= check_box_tag :guess, "Tie", false, class: "prediction-checkbox form-check-input" %>
+                              <!-- </label> -->
+                            </div>
+
+                            <!-- away -->
+                            <div class="form-group form-check form-check-inline">
+                              <%= label_tag :guess, "#{@away_team.name}", class: "form-check-label"%>
+                              <%= check_box_tag :guess, @away_team.name, false, class: "prediction-checkbox form-check-input" %>
+                            </div>
+                          </div>
+
+                          <div class="reason-textbox form-group mx-auto">
+                            <%= text_area_tag :reason, nil, class:"form-control", placeholder: "Add Your Reason Why... " %>
+                          </div>
+
+                          <%= hidden_field_tag "user_id", current_user.id %>
+
+                          <%= hidden_field_tag "match_id", match.id %>
+
+                          <div class="form-actions prediction-submit">
+                            <%= submit_tag "Submit", class: "btn btn-primary btn-md" %>
+                          </div>
+
+                        <% end %>
+
+                      <% else %>
+                      <div class="d-flex flex-column align-content-center">
+                        <h2>Your Prediction</h2>
+                        <div><% user_prediction = current_user.predictions.find{|prediction| prediction.match_id == match.id} %></div>
+                        <div>Your Guess: <%= user_prediction.guess %> </div>
+                        <%if user_prediction.reason != ""%>
+                          <div> Your Reasoning: <%= user_prediction.reason %> </div>
+                        <% end %>
+
+                      </div>
+                      <% end %>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <%match.questions.each do |question|%>
+                  <div class="slide black-bg">
+                    <div class="row justify-content-center">
+                      <div class="col-xs-12">
+                        <h2 class="match-question"><%=question.display_text%></h2>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-xs-12">
+                        <%= form_tag(controller: 'predictions', action: 'create', class: "form-inline") do %>
+                          <%if question.response_type == "integer"%>
+                            <div class="form-group">
+                              <label class="prediction-label" for="integer-prediction">Your Prediction</label>
+                              <input type="email" class="form-control" id="integer-prediction" aria-describedby="emailHelp" placeholder="Your Prediction">
+                            </div>
+                          <%elsif question.response_type == "boolean"%>
+                          <div class="form-group">
+                            <label class="prediction-label" for="boolean-prediction">True or False</label>
+                            <select class="form-control" id="boolean-prediction">
+                              <option>True</option>
+                              <option>False</option>
+                            </select>
+                          </div>
+                          <%end%>
+                        <% end %>
+                      </div>
+                    </div>
+                    </div>
+                <%end%>
+
+
+
+              <!-- All Predictions Slide -->
+
+              <div class="slide big-black">
+                <div class="container-fluid">
+                  <% home_predictions = select_team_predictions(match, @home_team) %>
+                  <% away_predictions = select_team_predictions(match, @away_team) %>
+                  <% tie_predictions = select_tie_predictions(match, "tie") %>
+                  <div class="row">
+                    <div class="col-xs-12 mx-auto">
+                      <h1 class="match-heading"> <%= @home_team.name %> vs. <%=  @away_team.name %> </h1>
+                      <p class="match-info"> <%= match.start_date.strftime("%B #{match.start_date.day.ordinalize}") %>, <%= match.venue.name %> </p>
+                      <p> Total predictions for this match: <%= calculate_total_predictions(match).to_i %> </p>
+                    </div>
+                  </div>
+                  <!-- Home predictions -->
+                  <div class="row">
+                    <div class="col-xs-12 mx-auto">
+                      <% number_of_home_predictions = home_predictions.count %>
+                      <h4 class="prediction-board-header"> <%= number_of_home_predictions %> <%= pluralize_prediction_statement(number_of_home_predictions) %> that <%= @home_team.name %> will win (<%= calculate_team_prediction_percentage(match, @home_team) %>) </h4>
+                    </div>
+                  </div>
+
+                  <% home_predictions.each do |prediction| %>
+                    <div class="row justify-content-between">
+
+
+                    <div class="col-xs-12 col-md-3">
+                      <div class="username">
+                        <p class="text-center"> <%= prediction.user.username %></p>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-3">
+                      <div class="prediction-reason">
+                        <p class="text-center"> <%= prediction.reason %></p>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-3">
+                      <div class="likes">
+                        <p class="text-center"><%= prediction.likes %> likes </p>
+                      </div>
+                    </div>
+
+                  </div>
+                  <%end%>
+                  <hr class"prediction-divider"/>
+
+                    <!-- Tie predictions -->
+                    <div class="row">
+                      <div class="col-xs-12 mx-auto">
+                        <% number_of_tie_predictions = tie_predictions.count %>
+                        <h4 class="prediction-board-header"> <%= number_of_tie_predictions %> <%= pluralize_prediction_statement(number_of_tie_predictions) %> that there will be a tie (<%= calculate_tie_prediction_percentage(match, "tie") %> ) </h4>
+                      </div>
+                    </div>
+
+                    <% tie_predictions.each do |prediction| %>
+                    <div class="row justify-content-between">
+
+                      <div class="col-xs-12 col-md-3">
+                        <div class="username">
+                          <p class="text-center"><%= prediction.user.username %></p>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-3">
+                        <div class="prediction-reason">
+                          <p class="text-center"> <%= prediction.reason %></p>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-3">
+                        <div class="likes">
+                          <p> <%= prediction.likes %> likes</p>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class"prediction-divider"/>
+                  <%end%>
+
+
+                      <!-- Away predictions -->
+                      <div class="row">
+                        <div class="col-xs-12 mx-auto">
+                          <% number_of_away_predictions = away_predictions.count %>
+                          <h4 class="prediction-board-header"> <%= number_of_away_predictions %> <%= pluralize_prediction_statement(number_of_away_predictions) %> that <%= @away_team.name %> will win (<%= calculate_team_prediction_percentage(match, @away_team) %>) </h4>
+                        </div>
+                      </div>
+
+                      <% away_predictions.each do |prediction| %>
+                      <div class="row justify-content-between">
+                        <!-- <div class="col-xs-12 col-md-3">
+                          <div class="user-avatar">
+
+                          </div>
+                        </div> -->
+
+                        <div class="col-xs-12 col-md-3">
+                          <div class="username">
+                            <p class="text-center"><%= prediction.user.username %></p>
+                          </div>
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-3">
+                          <div class="prediction-reason">
+                            <p class="text-center"><%= prediction.reason %></p>
+                          </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-3">
+                          <div class="likes">
+                            <p class="text-center"><%= prediction.likes %> likes </p>
+                          </div>
+                        </div>
+                      </div>
+                    <%end%>
+                  </div> <!-- End leaderboard row 3 -->
+                </div><!-- End leaderboard container -->
+              </div>
+          <% end %>
+    </div> <!-- End fullpage -->
