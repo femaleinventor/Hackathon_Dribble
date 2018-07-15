@@ -34,11 +34,14 @@ realtime results showing
 
 Choose to engage with leagues and teams around the world.
 
-![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/WorldwideLeagues.png)
+
 
 Our hooks also include pre-match predictions on a variety of stats in a beautiful app format.
 
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/Predictions.gif)
+
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/WorldwideLeagues.png)
+
 
 A user answers questions like:
 Which team will win the match?
