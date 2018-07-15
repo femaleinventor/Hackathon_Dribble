@@ -171,9 +171,12 @@ end
 #[result, channel, start_time, start_date, league_id, away_team_id, home_team_id, sport_id, venue_id, ref_id]
 
 matches = [
-  [ "Seattle Reign", "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2, 11, 10, 1, 6, 7443 ],
-  [ "Tie",           "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2,  8,  6, 1, 6, 7444 ],
-  [ "Utah Royals",   "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2, 14, 13, 1, 6, 7445 ]
+  [ "Seattle Reign", "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2, 11, 10, 1, 5, 7443 ],
+  [ "Tie",           "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2,  8,  6, 1, 7, 7444 ],
+  [ "Utah Royals",   "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2, 14, 13, 1, 8, 7445 ]
+  [ "", "go90 App", Time.parse("20:00"), Date.new(2018,7,15,12), 2,  7, 10, 1, 5, 7545 ],
+  [ "", "go90 App", Time.parse("20:00"), Date.new(2018,7,20,12), 2,  8, 13, 1, 8, 7546 ],
+  [ "", "go90 App", Time.parse("15:30"), Date.new(2018,7,21,12), 2, 11,  9, 1, 4, 7547 ]
 ]
 
 # -----------------
