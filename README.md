@@ -11,7 +11,7 @@ There are no Women's Soccer API's out there and very few quality datasets freely
 
 ## What is our project?
 
-We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. No money Our business model is providing a alternative store that sells items not under the US Soccer Umbrella.
+This project drives consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. No money Our business model is providing a alternative store that sells items not under the US Soccer Umbrella.
 
 Our app is divided into 5 sections:
 
