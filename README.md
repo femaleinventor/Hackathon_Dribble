@@ -3,7 +3,7 @@ A repo for competing in the US Soccer Hackathon.
 
 ## What is the problem we are trying to solve?
 
-Woman's Soccer has incredible potentially to grow globally.  And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. In the past year, a World Cup off year, Mexico in their first year in league play had multiple games with over 50k fans at the games. England Super league did the same in their semis and finals. Once sports goers leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
+Woman's Soccer has incredible potentially to grow globally.  And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. In the past year, an off World Cup year, Mexico in their first year in league play had multiple games with over 50k fans at the games. England's Super league did the same in their semis and finals. Once sports goers leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
 
 ## Challenges
 
@@ -11,15 +11,32 @@ There are no Women's Soccer API's out there and very few quality datasets freely
 
 ## What is our project?
 
-We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. Our business model is providing a alternative store that sells items not under the US Soccer Umbrella.
+We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. No money Our business model is providing a alternative store that sells items not under the US Soccer Umbrella.
 
-Our app is divided into 4 sections:
+Our app is divided into 5 sections:
+
+Dribble - An area where a user interacts with predictions and statistics
+Store - Where the user purchases items or player experiences
+Wall - An area where a fan sees realtime tweets and sentiments overs time (we also recorded tonight's Chicago Red Stars vs Seattle Reign game and provided insights over the entire game!)
+Twitter - Tweets of WoSo Writers, Teams Members, Retired Players, Recent Callups by category
+
+
+Here is where we begin:
 
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/homepage.png)
 
-Our hooks include:
 
 **Dribble**
+
+Choose to engage with leagues and teams around the world. The app is meant to grow the international game of soccer. Emphasis is not just on the USA. It's all many domestic leagues and federations. Making predictions in leagues you don't know much about is a learning opportunity.
+
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/WorldwideLeagues.png)
+
+Once in the app a users swipes up and down to browse through matches in each league. Team colors are blended to form the background of the page and begin to expose the user to an aspect of the team. The swiping is habit forming.
+
+We ask not only who will win, but why does a user think this. Again, the brief moment of considering a reason deepens the understanding.
+
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/Predictions.gif)
 
 
 Real-time in match user engagement with Reactive and Predictive notifications.
@@ -31,19 +48,6 @@ realtime results showing
 Predictive Notification example:
 Do you think Sky Blue FC will score in the next 10 minutes?
 realtime results showing
-
-Choose to engage with leagues and teams around the world.
-
-![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/WorldwideLeagues.png)
-
-
-
-Our hooks also include pre-match predictions on a variety of stats in a beautiful app format.
-
-![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/Predictions.gif)
-
-
-
 
 A user answers questions like:
 Which team will win the match?
@@ -62,7 +66,13 @@ We also protect soccer players and prominent members of the soccer community by 
 
 A user can go see what the WoSo community is selling. Purchase a fun funky t-shirt that a player/designer has made. There will also be experiences for sale, like a small group clinic sponsored by a current NWSL player. The store items are woven into the fabric of the app.
 
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/CommericalModel.png)
+
+
 **Wall**
+
+
+
 
 
 Sample Returns from Sentiment Analysis:
