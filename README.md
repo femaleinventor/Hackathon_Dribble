@@ -41,7 +41,7 @@ We ask not only who will win, but why does a user think this. Again, the brief m
 
 Real-time in match user engagement with Reactive and Predictive notifications.
 
-Reactive Notifcation example:
+Reactive Notification example:
 Should that foul have been a A) red card B) yellow card C) no foul?
 realtime results showing
 
@@ -58,6 +58,7 @@ How many Nutmegs will happen?
 
 A User can look historically at the data and compare themselves to other User's predictions.
 
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/realtimestats.gif)
 
 We also protect soccer players and prominent members of the soccer community by restricting these. So someone can't user MiaHamm or Abby-Wambach as a username in the app.
 
