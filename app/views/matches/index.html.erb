@@ -71,13 +71,14 @@
 
                       <% else %>
                       <div class="d-flex flex-column align-content-center">
-                        <h2>Your Prediction</h2>
-                        <div><% user_prediction = current_user.predictions.find{|prediction| prediction.match_id == match.id} %></div>
-                        <div>Your Guess: <%= user_prediction.guess %> </div>
-                        <%if user_prediction.reason != ""%>
-                          <div> Your Reasoning: <%= user_prediction.reason %> </div>
-                        <% end %>
-
+                        <div class="prediction-review">
+                          <h2>Your Prediction</h2>
+                          <div><% user_prediction = current_user.predictions.find{|prediction| prediction.match_id == match.id} %></div>
+                          <div>Your Guess: <%= user_prediction.guess %> </div>
+                          <% if user_prediction.reason != ""%>
+                            <div> Your Reasoning: <%= user_prediction.reason %> </div>
+                          <% end %>
+                        </div>
                       </div>
                       <% end %>
                     </div>
@@ -86,6 +87,8 @@
                 </div>
 
                 <%match.questions.each do |question|%>
+
+
                   <div class="slide black-bg">
                     <div class="row justify-content-center">
                       <div class="col-xs-12">
@@ -94,21 +97,28 @@
                     </div>
                     <div class="row justify-content-center">
                       <div class="col-xs-12">
-                        <%= form_tag(controller: 'predictions', action: 'create', class: "form-inline") do %>
+                        <%= form_tag(controller: 'predictions', action: 'create') do %>
                           <%if question.response_type == "integer"%>
                             <div class="form-group">
-                              <label class="prediction-label" for="integer-prediction">Your Prediction</label>
-                              <input type="email" class="form-control" id="integer-prediction" aria-describedby="emailHelp" placeholder="Your Prediction">
+                              <%= text_field_tag :guess %>
+                              <%= label_tag :guess, "Your Prediction"%>
                             </div>
+                            <%= submit_tag "Submit", class: "btn btn-primary btn-md" %>
                           <%elsif question.response_type == "boolean"%>
+
                           <div class="form-group">
-                            <label class="prediction-label" for="boolean-prediction">True or False</label>
-                            <select class="form-control" id="boolean-prediction">
-                              <option>True</option>
-                              <option>False</option>
-                            </select>
+                            <%= label_tag :guess, "Your Prediction"%>
+                            <%= select_tag :guess, '<option value="true">True</option><option value="false">False</option>'.html_safe %>
+                            <%= submit_tag "Submit", class: "btn btn-primary btn-md" %>
                           </div>
+
+
                           <%end%>
+                          <%= hidden_field_tag "user_id", current_user.id %>
+
+                          <%= hidden_field_tag "match_id", match.id %>
+
+                          <%= hidden_field_tag "question_id", question.id %>
                         <% end %>
                       </div>
                     </div>

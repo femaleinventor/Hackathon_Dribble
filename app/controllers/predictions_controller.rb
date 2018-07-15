@@ -9,6 +9,7 @@ class PredictionsController < ApplicationController
       # Returns to matches#index page after prediction submission
       @league = @prediction.match.league
       redirect_to league_matches_path(@league), alert: "Thanks for making a prediction!"
+      # redirect_to sports_path
       # redirect_to "/", alert: "Thanks for making a prediction!"
     else
         redirect_to league_matches_path, alert: "Oops! Your prediction wasn't recorded. Try again!"
@@ -17,6 +18,6 @@ class PredictionsController < ApplicationController
 
   private
     def prediction_params
-      params.permit(:guess, :reason, :match_id, :user_id)
+      params.permit(:guess, :reason, :match_id, :user_id, :question_id)
     end
 end
