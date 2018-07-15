@@ -24,6 +24,11 @@ csv.each do |row|
   t.save!
 end
 
+
+# -----------------
+# Sports
+# -----------------
+
 sport_list = [
   [ "Soccer", "/../assets/images/small_sports/soccer_ball.png" ],
   [ "BasketBall", "/../assets/images/small_sports/basket_ball.png"],
@@ -36,6 +41,11 @@ sport_list = [
 sport_list.each do |sport|
   Sport.create!(name: sport[0], image_url: sport[1])
 end
+
+
+# -----------------
+# Leagues
+# -----------------
 
 league_list = [
   [ "FIFA (Worldwide National Teams)", "FIFA", 1],
@@ -104,6 +114,11 @@ league_list.each do |league|
   League.create!(name: league[0], abbreviation: league[1], sport_id: league[2])
 end
 
+
+# -----------------
+# Venues
+# -----------------
+
 venues_list = [
   #id 1
   [ "Toyota Park", "venues/Toyota_Park.jpg", "7000 Harlem Ave, Bridgeview, IL 60455", "America/Chicago"],
@@ -154,6 +169,7 @@ end
 # Matches go here! :)
 #----------------------
 #[result, channel, start_time, start_date, league_id, away_team_id, home_team_id, sport_id, venue_id, ref_id]
+
 matches = [
   [ "Seattle Reign", "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2, 11, 10, 1, 5, 7443 ],
   [ "Tie",           "go90 App", Time.parse("19:00"), Date.new(2018,5,6), 2,  8,  6, 1, 7, 7444 ],
@@ -162,9 +178,12 @@ matches = [
   [ "", "go90 App", Time.parse("20:00"), Date.new(2018,7,20,12), 2,  8, 13, 1, 8, 7546 ],
   [ "", "go90 App", Time.parse("15:30"), Date.new(2018,7,21,12), 2, 11,  9, 1, 4, 7547 ]
 ]
-  
+
+# -----------------
+# Questions
+# -----------------
 # [display_text, response_type, match_id, ref_id]
-questions = [
+questions_list = [
   ["How many goals will Portland Thorns FC score?", "integer", 1, 7443],
   ["How many goals will Seattle Reign FC score?", "integer", 1, 7443 ],
   ["How many shot assists will Margaret Purce have?", "integer", 1, 7443],
@@ -174,7 +193,7 @@ questions = [
   ["Which team will have more interceptions?", "triplet", 1, 7443],
   ["Who will win?", "triplet" 1, 7443],
   ["Will Margaret Purce nutmeg another player?", "boolean", 1, 7443],
-  ["Will Beverly Yanez nutmeg another player?", "boolean", 2, 7444],
+  ["Will Beverly Yanez nutmeg another player?", "boolean", 2, 7443],
   ["How many goals will North Carolina Courage score?", "integer", 2, 7444],
   ["How many goals will Chicago Red Stars score?", "integer", 2, 7444],
   ["How many shot assists will Jaelene Hinkle have?", "integer", 2, 7444],
@@ -183,60 +202,26 @@ questions = [
   ["How many diving saves will the keeper for Chicago Red Stars have?", "integer", 2, 7444],
   ["Which team will have more interceptions?", "triplet", 2, 7444],
   ["Who will win?", "triplet" 1, 7444],
-  ["", 2, 7444],
-  ["", 2, 7444],
-  ["", 2, 7444],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445],
-  ["", 3, 7445]
+  ["Will Jaelene Hinkle nutmeg another player?", "boolean", 2, 7444],
+  ["Will Débora Cristiane de Oliveira nutmeg another player?", "boolean" 2, 7444],
+  ["How many goals will Utah Royals FC score?", "integer", 3, 7445],
+  ["How many goals will Washington Spirit score?", "integer", 3, 7445],
+  ["How many shot assists will Katrina Gorry have?", "integer", 3, 7445],
+  ["How many shot assists will Ashley Hatch have?", "integer", 3, 7445],
+  ["How many diving saves will the keeper for Utah Royals FC have?", "integer", 3, 7445],
+  ["How many diving saves will the keeper for Washington Spirit have?", "integer", 3, 7445],
+  ["Which team will have more interceptions?", "integer", 3, 7445],
+  ["Who will win?", "triplet", 3, 7445]
 ]
 
+questions_list.each do |question|
+  Question.create!(display_text: question[0], response_type: question[1], match_id: question[2], ref_id: question[3])
+end
 
 
-
-
-7443,How many goals will Portland Thorns FC score?,INTEGER
-7443,How many goals will Seattle Reign FC score?,INTEGER
-7443,How many shot assists will Margaret Purce have?,INTEGER
-7443,How many shot assists will Ana-Maria Crnogorcevic have?,INTEGER
-7443,How many diving saves will the keeper for Portland Thorns FC have?,INTEGER
-7443,How many diving saves will the keeper for Seattle Reign FC have?,INTEGER
-7443,Which team will have more interceptions?,TRIPLET
-7443,Who will win?,TRIPLET
-7443,Will Margaret Purce nutmeg another player?,BOOLEAN
-7443,Will Beverly Yanez nutmeg another player?,BOOLEAN
-
-7444,How many goals will North Carolina Courage score?,INTEGER
-7444,How many goals will Chicago Red Stars score?,INTEGER
-7444,How many shot assists will Jaelene Hinkle have?,INTEGER
-7444,How many shot assists will Abby Dahlkemper have?,INTEGER
-7444,How many diving saves will the keeper for North Carolina Courage have?,INTEGER
-7444,How many diving saves will the keeper for Chicago Red Stars have?,INTEGER
-7444,Which team will have more interceptions?,TRIPLET
-7444,Who will win?,TRIPLET
-7444,Will Jaelene Hinkle nutmeg another player?,BOOLEAN
-7444,Will Débora Cristiane de Oliveira nutmeg another player?,BOOLEAN
-
-7445,How many goals will Utah Royals FC score?,INTEGER
-7445,How many goals will Washington Spirit score?,INTEGER
-7445,How many shot assists will Katrina Gorry have?,INTEGER
-7445,How many shot assists will Ashley Hatch have?,INTEGER
-7445,How many diving saves will the keeper for Utah Royals FC have?,INTEGER
-7445,How many diving saves will the keeper for Washington Spirit have?,INTEGER
-7445,Which team will have more interceptions?,TRIPLET
-7445,Who will win?,TRIPLET
-
-
-
+# -----------------
+# Users
+# -----------------
 users_list = [
   #id1
   ["Erica Amaya", "woso_girl", "@ericamaya6",  "2 Salem Green", "Salem", "MA", "01970","Eastern Time (US & Canada)", "USA", "erick@mail.com", "password", "bitmoji/erica.jpeg"],
@@ -245,7 +230,7 @@ users_list = [
   #id3
   ["Denise Duffy", "sunnysideup", "@denise_duffy", "142 Whitney Street", "San Francisco", "CA",  "94131", "Pacific Time (US & Canada)", "USA", "denise@deniseduffy.com", "password", "bitmoji/denise.jpeg"],
   #id4
-  ["Tania Ardel", "sunnysideup", "@ardelltania", "2700 Great Highway", "San Francisco", "CA", "96161", "Pacific Time (US & Canada)", "USA", "mike.duffy@usa.com", "password", "bitmoji/tania.jpeg"],
+  ["Tania Ardel", "sunnysidedown", "@ardelltania", "2700 Great Highway", "San Francisco", "CA", "96161", "Pacific Time (US & Canada)", "USA", "mike.duffy@usa.com", "password", "bitmoji/tania.jpeg"],
   #id5
   ["Rachel W", "Rachel_Will!", "@rachelwill", "111 A Street", "San Francisco", "CA", "96161", "Pacific Time (US & Canada)", "USA","notdan@usa.com", "password", "bitmoji/rachel.jpeg"],
   #id6
@@ -262,3 +247,32 @@ users_list = [
 users_list.each do |user|
   User.create!(name: user[0], username: user[1], twitter_handle: user[2], street_address: user[3], city: user[4], state: user[5], zipcode: user[6], time_zone: user[7], country: user[8], email: user[9], password: user[10], avatar: user[11])
 end
+
+
+# -----------------
+# Predictions
+# -----------------
+# [guess, reason, likes, user_id, match_id, question_id]
+predictions_list = [
+  #Past match predictions
+  ["1", "", "", 3, 1],
+  [, "", "", 4, 1],
+  ["", "", "", 5, 1],
+  ["", "", "", 6, 1],
+  ["", "", "", 7, 1],
+  ["", "", "", 8, 1],
+  ["", "", "", 9, 1],
+  ["", "", "", 9, 1],
+  ["Seattle Reign", "", "", 1, 1],
+  ["Portland Thorns", "", "", 2, 1],
+  #Future match predictions
+  ["", "", "", 1, 4],
+  ["", "", "", 2, 4],
+  ["", "", "", 3, 4],
+  ["", "", "", 4, 5],
+  ["", "", "", 5, 5],
+  ["", "", "", 6, 5],
+  ["", "", "", 7, 6],
+  ["", "", "", 8, 6],
+  ["", "", "", 9, 6]
+]
