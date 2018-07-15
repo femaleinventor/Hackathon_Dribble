@@ -73,11 +73,11 @@ A user can go see what the WoSo community is selling. Purchase a fun funky t-shi
 
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/TwitterWall.png)
 
-And We have realtime sentiment analysis!!!
+And We have realtime sentiment analysis! Tweets collected over the course of a game are analyzed to see whether they were positive or negative and how strong the feelings are. When this data is broken into buckets and compared to actual game events, we see strong negative feelings when players are injured and strong positive feelings immediately preceded a goal indicating that fans were picking up on the momentum change.
 
+The Twitter API stream collects tweets that mention the game hashtag, team Twitter handles, or player names. The text of the tweets are then run through the Google Sentiment Analysis API which returns values for the sentiment score (-1 to 1 representing negative to positive sentiment) and the magnitude which represents how strong those feelings are. From there, the tweets with a score of 0 are dropped, and each tweet is given a converted score equal to (magnitude * 10)^2 * score. Tweets are then grouped into 5 minute time intervals and the scores of the tweets in each bucket are summed. This data is then plotted on a graph with relevant game events overlaid (injuries and goals).
 
-
-
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/sentiment/sentiment.jpg)
 
 
 **Twitter**
