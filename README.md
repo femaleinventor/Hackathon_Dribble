@@ -11,7 +11,7 @@ There are no Women's Soccer API's out there and very few quality datasets freely
 
 ## What is our project?
 
-We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. Our business model is providing a alternative store that sells items not under the US Soccer Umbrella
+We are driving consumer-centric engagement in women's soccer. We believe the best way to grow the game is to create habit forming hooks. Making predictions in is a fun and safe way of engaging. Our business model is providing a alternative store that sells items not under the US Soccer Umbrella.
 
 Our app is divided into 4 sections:
 
@@ -34,6 +34,7 @@ realtime results showing
 
 Choose to engage with leagues and teams around the world.
 
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/WorldwideLeagues.png)
 
 Our hooks also include pre-match predictions on a variety of stats in a beautiful app format.
 
