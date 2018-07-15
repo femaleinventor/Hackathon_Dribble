@@ -169,20 +169,16 @@ end
 # Matches go here! :)
 #----------------------
 #[result, channel, start_time, start_date, league_id, away_team_id, home_team_id, sport_id, venue_id, ref_id]
+
 matches = [
   [ "Seattle Reign", "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2, 11, 10, 1, 6, 7443 ],
   [ "Tie",           "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2,  8,  6, 1, 6, 7444 ],
   [ "Utah Royals",   "go90 App", Time.parse("19:00"), Date.new(2018,5,6,12), 2, 14, 13, 1, 6, 7445 ]
 ]
-<<<<<<< HEAD
-
 
 # -----------------
 # Questions
 # -----------------
-=======
-  
->>>>>>> f24085c4768b1fa3572871fd5d3bc2a33e695716
 # [display_text, response_type, match_id, ref_id]
 questions_list = [
   ["How many goals will Portland Thorns FC score?", "integer", 1, 7443],
@@ -248,3 +244,43 @@ users_list = [
 users_list.each do |user|
   User.create!(name: user[0], username: user[1], twitter_handle: user[2], street_address: user[3], city: user[4], state: user[5], zipcode: user[6], time_zone: user[7], country: user[8], email: user[9], password: user[10], avatar: user[11])
 end
+
+
+# -----------------
+# Predictions
+# -----------------
+# [guess, reason, likes, user_id, match_id]
+predictions_list = [
+  #Past match predictions
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  #Future match predictions
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  []
+]
