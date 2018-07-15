@@ -3,11 +3,11 @@ A repo for competing in the US Soccer Hackathon.
 
 ## What is the problem we are trying to solve?
 
-Woman's Soccer has incredible potentially to grow globally.  And a reminder, for the 2015 World Cup final there was a staggering 750 Million people who watched the game. In the past year, an off World Cup year, Mexico in their first year in league play had multiple games with over 50k fans at the games. England's Super league did the same in their semis and finals. Once sports goers leave the match or turn off their tv there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
+Woman's Soccer has incredible potential to grow globally.  The 2015 Women's World Cup final was watched by a staggering 750 million people! In the past year, an off World Cup year, Mexico in their first year in league play had multiple games with over 50 thousand fans in attendace. England's Super league did the same in their semis and finals. Once fans leave the match or turn off their TV there are very few web and mobile apps that are continuously engaging with those fans, particularly ones with a global outlook.
 
 ## Challenges
 
-There are no Women's Soccer API's out there and very few quality datasets freely available. Other sports such as Women's Basketball have this.
+There are no women's soccer API's out there and very few quality datasets freely available. Other sports such as women's basketball have this.
 
 ## What is our project?
 
@@ -16,8 +16,11 @@ This project drives consumer-centric engagement in women's soccer. We believe th
 Our app is divided into 5 sections:
 
 Dribble - An area where a user interacts with predictions and statistics
+
 Store - Where the user purchases items or player experiences
+
 Wall - An area where a fan sees realtime tweets and sentiments overs time (we also recorded tonight's Chicago Red Stars vs Seattle Reign game and provided insights over the entire game!)
+
 Twitter - Tweets of WoSo Writers, Teams Members, Retired Players, Recent Callups by category
 
 
@@ -109,8 +112,6 @@ Backend Engineer, Frontend Engineer
 
 Jamie Swanson | @jamieswanson3141 | jamieswanson3141@gmail.com |
 Database Engineer, Data Mapper and Parser
-
-
 
 
 Current Schema:
