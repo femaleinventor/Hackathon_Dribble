@@ -36,6 +36,8 @@ realtime results showing
 
 Our hooks also include pre-match predictions on a variety of stats in a beautiful app format.
 
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/Predictions.gif)
+
 A user answers questions like:
 Which team will win the match?
 How many goals will be scored?
