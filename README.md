@@ -71,7 +71,9 @@ A user can go see what the WoSo community is selling. Purchase a fun funky t-shi
 
 **Wall**
 
-We have realtime sentiment analysis!!!
+![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/TwitterWall.png)
+
+And We have realtime sentiment analysis!!!
 
 
 
