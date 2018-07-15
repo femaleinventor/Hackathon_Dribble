@@ -150,7 +150,90 @@ venues_list.each do |venue|
   Venue.create!(name: venue[0], picture_url: venue[1], address: venue[2], timezone: venue[3])
 end
 
+#----------------------
+# Matches go here! :)
+#----------------------
+#[result, channel, start_time, start_date, league_id, away_team_id, home_team_id, sport_id, venue_id, ref_id]
+matches = [
+  [],
+  [],
+  []
+]
 
+
+
+
+# [display_text, response_type, match_id, ref_id]
+questions = [
+  ["How many goals will Portland Thorns FC score?", "integer", 1, 7443],
+  ["How many goals will Seattle Reign FC score?", "integer", 1, 7443 ],
+  ["How many shot assists will Margaret Purce have?", "integer", 1, 7443],
+  ["How many shot assists will Ana-Maria Crnogorcevic have?", "integer", 1, 7443],
+  ["How many diving saves will the keeper for Portland Thorns FC have?", "integer", 1, 7443],
+  ["How many diving saves will the keeper for Seattle Reign FC have?", "integer", 1, 7443],
+  ["Which team will have more interceptions?", "triplet", 1, 7443],
+  ["Who will win?", "triplet" 1, 7443],
+  ["Will Margaret Purce nutmeg another player?", "boolean", 1, 7443],
+  ["Will Beverly Yanez nutmeg another player?", "boolean", 2, 7444],
+  ["How many goals will North Carolina Courage score?", "integer", 2, 7444],
+  ["How many goals will Chicago Red Stars score?", "integer", 2, 7444],
+  ["How many shot assists will Jaelene Hinkle have?", "integer", 2, 7444],
+  ["How many shot assists will Abby Dahlkemper have?", "integer", 2, 7444],
+  ["How many diving saves will the keeper for North Carolina Courage have?", "integer", 2, 7444],
+  ["How many diving saves will the keeper for Chicago Red Stars have?", "integer", 2, 7444],
+  ["Which team will have more interceptions?", "triplet", 2, 7444],
+  ["Who will win?", "triplet" 1, 7444],
+  ["", 2, 7444],
+  ["", 2, 7444],
+  ["", 2, 7444],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445],
+  ["", 3, 7445]
+]
+
+
+
+
+
+7443,How many goals will Portland Thorns FC score?,INTEGER
+7443,How many goals will Seattle Reign FC score?,INTEGER
+7443,How many shot assists will Margaret Purce have?,INTEGER
+7443,How many shot assists will Ana-Maria Crnogorcevic have?,INTEGER
+7443,How many diving saves will the keeper for Portland Thorns FC have?,INTEGER
+7443,How many diving saves will the keeper for Seattle Reign FC have?,INTEGER
+7443,Which team will have more interceptions?,TRIPLET
+7443,Who will win?,TRIPLET
+7443,Will Margaret Purce nutmeg another player?,BOOLEAN
+7443,Will Beverly Yanez nutmeg another player?,BOOLEAN
+
+7444,How many goals will North Carolina Courage score?,INTEGER
+7444,How many goals will Chicago Red Stars score?,INTEGER
+7444,How many shot assists will Jaelene Hinkle have?,INTEGER
+7444,How many shot assists will Abby Dahlkemper have?,INTEGER
+7444,How many diving saves will the keeper for North Carolina Courage have?,INTEGER
+7444,How many diving saves will the keeper for Chicago Red Stars have?,INTEGER
+7444,Which team will have more interceptions?,TRIPLET
+7444,Who will win?,TRIPLET
+7444,Will Jaelene Hinkle nutmeg another player?,BOOLEAN
+7444,Will Débora Cristiane de Oliveira nutmeg another player?,BOOLEAN
+
+7445,How many goals will Utah Royals FC score?,INTEGER
+7445,How many goals will Washington Spirit score?,INTEGER
+7445,How many shot assists will Katrina Gorry have?,INTEGER
+7445,How many shot assists will Ashley Hatch have?,INTEGER
+7445,How many diving saves will the keeper for Utah Royals FC have?,INTEGER
+7445,How many diving saves will the keeper for Washington Spirit have?,INTEGER
+7445,Which team will have more interceptions?,TRIPLET
+7445,Who will win?,TRIPLET
 
 
 

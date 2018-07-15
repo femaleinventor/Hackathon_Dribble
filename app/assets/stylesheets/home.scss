@@ -1,3 +1,106 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$theme-orange: #F0900E;
+$theme-blue: #16A7D5;
+$theme-grey: #707070;
+$theme-green: #00D37F;
+
+.home-menu-area {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+// When smaller than 750px
+@media (max-width: 750px){
+  .action-title{
+    a{
+      font-size: 8.5vmin;
+    }
+  }
+}
+
+// When larger than 750px
+@media (min-width: 750px){
+  .action-title{
+    a{
+      font-size: 63.75px;
+    }
+  }
+}
+
+// When smaller than 500px
+@media (max-width: 500px){
+  .action-subtext {
+    display: none;
+  }
+  .action-title {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media(min-width: 500px){
+  .action-title{
+    height: 50%;
+  }
+  .left{
+    align-items: flex-end;
+  }
+}
+
+
+
+.home-nav { // *thing to center* //
+  background-color: $theme-grey;
+  height: 100vmin;
+  width: 100vmin;
+  max-width: 750px;
+  max-height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5vmin;
+  .nav-row{
+    display: flex;
+    justify-content: space-between;
+    height: 49.5%;
+    width: 100%;
+    .action-button{
+      display: flex;
+      flex-direction: column;
+      width: 49.5%;
+      background-color: white;
+      .action-title{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .orange{
+        color: $theme-orange;
+      }
+      .green-ish{
+        color: $theme-green;
+      }
+      .blue{
+        color: $theme-blue;
+      }
+      .action-subtext{
+        font-size: 1.6vmin;
+      }
+    }
+    .left{
+      text-align: right;
+      padding-right: 5vmin;
+      padding-left: 2vmin;
+    }
+    .right{
+      padding-left: 5vmin;
+      padding-right: 2vmin;
+    }
+  }
+}
