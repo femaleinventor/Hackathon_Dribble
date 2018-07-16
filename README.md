@@ -75,6 +75,8 @@ A user can go see what the WoSo community is selling. Purchase a fun funky t-shi
 
 **Wall**
 
+Recent Tweets on Women's Soccer keywords.
+
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/TwitterWall.png)
 
 And We have realtime sentiment analysis! Tweets collected over the course of a game are analyzed to see whether they were positive or negative and how strong the feelings are. When this data is broken into buckets and compared to actual game events, we see strong negative feelings when players are injured and strong positive feelings immediately preceded a goal indicating that fans were picking up on the momentum change.
