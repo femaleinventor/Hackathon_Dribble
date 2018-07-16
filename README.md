@@ -81,6 +81,8 @@ And We have realtime sentiment analysis! Tweets collected over the course of a g
 
 The Twitter API stream collects tweets that mention the game hashtag, team Twitter handles, or player names. The text of the tweets are then run through the Google Sentiment Analysis API which returns values for the sentiment score (-1 to 1 representing negative to positive sentiment) and the magnitude which represents how strong those feelings are. From there, the tweets with a score of 0 are dropped, and each tweet is given a converted score equal to (magnitude * 10)^2 * score. Tweets are then grouped into 5 minute time intervals and the scores of the tweets in each bucket are summed. This data is then plotted on a graph with relevant game events overlaid (injuries and goals).
 
+This is from the Chicago Redstars versus the Seattle Reign on 7/14/2018. There two injuries, one major that effected sentiment, and one goal scored. 
+
 ![](https://github.com/femaleinventor/Hackathon_Dribble/blob/development/sentiment/sentiment.jpg)
 
 
